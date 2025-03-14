@@ -11,6 +11,7 @@ import Login from './pages/Login';
 // import Fishing from './pages/Fishing';
 // import Camping from './pages/Camping';
 // import RioOnsen from './pages/RioOnsen';
+import KagamiWeather from './pages/KagamiWeather';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/createpost" element={<CreatePost />} />
           <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+          <Route path="/weather" element={<KagamiWeather />} /> 
           {/* <Route path="/fishing" element={<Fishing />} />
           <Route path="/camping" element={<Camping />} />
           <Route path="/onsen" element={<RioOnsen />} /> */}

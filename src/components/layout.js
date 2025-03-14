@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Navbar and Footer came from Bootstrap
@@ -27,6 +28,9 @@ export function Navbar( { isAuth, setIsAuth } ) {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/createpost">Create Post</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/weather">Kagami Weather</Link>
                         </li>
                         {!isAuth ? (
                             <li className="nav-item">
