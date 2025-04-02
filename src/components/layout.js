@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase-config';
 
 // Navbar and Footer came from Bootstrap
 // Change <a> tags to <Link> tags
 // Change class to className
-export function Navbar( { isAuth, setIsAuth } ) {
+export function Navbar({ isAuth, setIsAuth }) {
 
-    const handleLogout = () => {
-        localStorage.removeItem("isAuth");
-        setIsAuth(false);
+    const signUserOut = () => {
+        signOut(auth).then(() => {
+            localStorage.clear();
+            setIsAuth(false);
+        });
     };
 
     return (
@@ -38,7 +42,7 @@ export function Navbar( { isAuth, setIsAuth } ) {
                             </li>
                         ) : (
                             <li className="nav-item">
-                                <button className="btn btn-outline-danger my-2 my-sm-0" onClick={handleLogout}>
+                                <button className="btn btn-outline-danger my-2 my-sm-0" onClick={signUserOut}>
                                     Logout
                                 </button>
                             </li>

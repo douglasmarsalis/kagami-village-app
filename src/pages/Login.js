@@ -1,5 +1,5 @@
 import React from 'react';
-import { auth, provider } from '../firebase-config';
+import { auth, provider } from '../firebase-config';  // Import the auth and provider from the firebase-config.js file
 import { signInWithPopup } from 'firebase/auth'; // There are many styles for the signIn method
 import { useNavigate } from 'react-router-dom'; // Allows for redirect to another page
 
