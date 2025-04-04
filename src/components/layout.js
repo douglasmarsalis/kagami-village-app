@@ -19,7 +19,7 @@ export function Navbar({ isAuth, setIsAuth }) {
         <nav className="navbar navbar-expand-lg bg-white border-bottom box-shadow">
             <div className="container">
                 <Link className="navbar-brand" to="/">
-                    <img src="/sakura.png" alt="Sakura Icon" width="30" className="me-2" />
+                    <img src="/transparentKagamiLogo.png" alt="Kagami Logo" width="30" className="me-2" />
                     Kagami Village
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
